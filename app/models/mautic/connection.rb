@@ -33,7 +33,7 @@ module Mautic
       raise NotImplementedError
     end
 
-    %w(assets campaigns categories companies emails forms messages notes notifications pages points roles stats users).each do |entity|
+    %w(assets campaigns categories companies emails forms messages notes notifications pages points roles stats users segments).each do |entity|
       define_method entity do
         Proxy.new(self, entity)
       end
